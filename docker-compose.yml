@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: anjos-edutech-pocketbase
+    ports:
+      - "8090:8090"
+    volumes:
+      - pb_data:/pb/pb_data
+      - pb_backups:/pb/backups
+    environment:
+      - BACKUP_INTERVAL_SECONDS=21600
+      - DATA_DIR=/pb/pb_data
+      - BACKUP_DIR=/pb/backups
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: anjos-edutech-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  pb_data:
+  pb_backups:
