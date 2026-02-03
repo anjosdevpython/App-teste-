@@ -1,0 +1,39 @@
+{
+  "alunos": [
+    {
+      "nome_completo": "Ana Clara Souza",
+      "data_nascimento": "2016-05-12",
+      "cpf_responsavel": "000.000.000-00",
+      "status": "ativo"
+    },
+    {
+      "nome_completo": "Lucas Pereira Lima",
+      "data_nascimento": "2015-09-22",
+      "cpf_responsavel": "000.000.000-00",
+      "status": "ativo"
+    }
+  ],
+  "turmas": [
+    {
+      "nome": "Infantil II - Manhã",
+      "ano_letivo": 2025,
+      "turno": "manha"
+    }
+  ],
+  "matriculas": [
+    {
+      "aluno": "{{aluno_id}}",
+      "turma": "{{turma_id}}",
+      "data_matricula": "2025-02-01",
+      "status": "ativa"
+    }
+  ],
+  "pagamentos": [
+    {
+      "aluno": "{{aluno_id}}",
+      "competencia": "2025-02",
+      "valor": 850.0,
+      "status": "pago"
+    }
+  ]
+}
