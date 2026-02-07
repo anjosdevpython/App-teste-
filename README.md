@@ -77,3 +77,15 @@ O backend gera backups em `/pb/backups` a cada 6 horas (configurável via `BACKU
 ## Observações
 
 Este projeto é um **monolito modular desacoplado** com foco em simplicidade operacional e evolução contínua.
+
+---
+
+## RecoverX (recuperação de dados)
+
+Este repositório também inclui o **RecoverX**, utilitário local (CLI + GUI Tkinter) para análise forense e recuperação de arquivos via assinatura binária.
+
+- Entrada: dispositivos físicos (quando permitido) e imagens `.img/.dd/.raw`
+- Saída: diretório dedicado, com cálculo de hash SHA-256
+- Relatórios: JSON em `reports/recovery_report.json`
+
+Documentação completa: `docs/recovery_tool.md`.
